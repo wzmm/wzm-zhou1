@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var arr=[1,5,5,8,9,1];
+    //去重第一种方法
+//    function fun(arr){
+//        var newarr=[];
+//        for(var i=0;i<arr.length;i++){
+//            if(newarr.indexOf(arr[i])==-1){
+//                newarr.push(arr[i])
+//            }
+//        }
+//        return newarr;
+//    }
+//    console.log(fun(arr))
+
+    //去重第二种方法
+    function fun1(arr){
+        var newarr=[]
+        for(var i= 0,l=arr.length;i<l;i++){
+            for(var j=i+1;j<l;j++)
+                if(arr[i]==arr[j])
+                j=++i;
+                newarr.push(arr[i])
+        }
+        return newarr
+    }
+    console.log(fun1(arr))
+</script>
+
+</body>
+</html>
